@@ -3,5 +3,23 @@
     height: 100%;
     padding: 0%;
     margin: 0%;
+}
+
+
+.halve {
+    height: 100%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container {
+    transform: translate(5rem, -5rem);
+}
+
+.start-image {
+    background-image: url(../images/20210823_125514.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
