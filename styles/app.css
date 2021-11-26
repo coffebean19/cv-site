@@ -3,7 +3,6 @@ navy blue #034687
 baby blue(whitish) #DBE8E1
 red #E10032 */
 
-
 :root {
 	background-color: #151B25;
 }
@@ -47,12 +46,12 @@ h1, h2, h3, h4 {
     border-radius: 0.5rem;
     background-color: #DBE8E1;
     color: #151B25;
-    box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
     transition: 200ms;
-    max-width: 25rem;
     min-width: 15rem;
-    /* float: left; */
-    padding: 1rem;
+}
+
+.fix-width {
+    max-width: 25rem;
 }
 
 .hover:hover {    

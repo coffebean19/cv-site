@@ -1,9 +1,29 @@
+/* cornflower(black) #151B25
+navy blue #034687
+baby blue(whitish) #DBE8E1
+red #E10032 */
+
 .circle {
     border-radius: 50%;
 }
 
 .home-container {
     overflow: auto 0;
+}
+
+.home-header {
+    color:#151B25;
+}
+
+.home-text-container {
+    color: #151B25;
+    padding: 1rem;
+}
+
+.line {
+    padding: 1rem;
+    background-color: #e10032;
+    height: 100%;
 }
 
 .float-left {
