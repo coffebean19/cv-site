@@ -93,12 +93,14 @@ h1, h2, h3, h4 {
 	width: 10rem;
 	text-align: center;
     border-radius: 0.5rem;
-	margin-bottom: 1rem;
 	text-decoration: none;
 	color: #DBE8E1;
 	background-color: #034687;
-    box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
     transition: 200ms;
+}
+
+.shadow {
+    box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -107,6 +109,22 @@ h1, h2, h3, h4 {
 
 .header:hover {
     color:#333;
+}
+
+.nav {
+    background-color: #034687;
+    overflow: hidden;
+    padding: 0;
+}
+
+.nav a {
+    float: left;
+    text-decoration: none;
+}
+
+a.active {
+    background-color: #DBE8E1;
+    color: #151B25;
 }
 
 /* For mobile */

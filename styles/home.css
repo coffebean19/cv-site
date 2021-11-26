@@ -1,0 +1,24 @@
+.circle {
+    border-radius: 50%;
+}
+
+.home-container {
+    overflow: auto 0;
+}
+
+.float-left {
+    position: relative;
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.lift {
+    z-index: 9rem;
+}
+
+.move-left {
+    transform: translateX(-1rem);
+}
