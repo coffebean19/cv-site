@@ -6,23 +6,25 @@ red #E10032 */
 
 .container {
     max-width: 70rem;
+    height: 100%;
 }
 
 .card {
-    padding: 2rem;
+    padding: 2rem;;
 }
 
 .hover:hover {
     background-color: #edfdf5;
 }
 
-.time {
+.time-box {
     margin: 2rem;
+    overflow: hidden;
 }
 
 
 /* the arrows */
-.time::after{  content: " ";
+.time-box::after{  content: " ";
     height: 0;
     position: absolute;
     left: 1.5rem;
@@ -34,7 +36,8 @@ red #E10032 */
     transition: 200ms;
 }
 
-.time:hover::after {
+
+.time-box:hover::after {
   content: " ";
     height: 0;
     position: absolute;
@@ -47,7 +50,7 @@ red #E10032 */
 }
 
 /* the circles */
-.time::before {
+.time-box::before {
     left: -1rem;
     content: '';
     position: absolute;
@@ -60,7 +63,7 @@ red #E10032 */
     transition: 200ms;
 }
 
-.time:hover::before {
+.time-box:hover::before {
     background-color: #edfdf5;
 }
 
@@ -73,6 +76,7 @@ red #E10032 */
   
   /* The actual timeline (the vertical ruler) */
   .timeline::after {
+    border-radius: 2rem;
     content: '';
     position: absolute;
     width: 6px;
@@ -82,3 +86,17 @@ red #E10032 */
     /* left: 50%; */
     margin-left: -3px;
   }
+
+  .desc-header {
+      padding: 1rem;
+      /* border: 0.2rem solid black; */
+      float: left;
+      width: 33%;
+  }
+
+  .desc-text {
+      /* border: 0.2rem solid black; */
+      float: left;
+      width: 66%;
+  }
+
