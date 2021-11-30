@@ -21,6 +21,7 @@ html, body {
 
 a {
     color: #DBE8E1;
+    text-decoration: none;
 }
 
 h1, h2, h3, h4 {
@@ -118,7 +119,7 @@ h1, h2, h3, h4 {
 
 .nav a {
     float: left;
-    text-decoration: none;
+    margin-left: 0.5rem;
 }
 
 a.active {
