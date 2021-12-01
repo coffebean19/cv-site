@@ -10,7 +10,7 @@ red #E10032 */
 }
 
 .card {
-    padding: 2rem;;
+    padding: 2rem;
 }
 
 .hover:hover {
@@ -20,6 +20,7 @@ red #E10032 */
 .time-box {
     margin: 2rem;
     overflow: hidden;
+    width: 90%;
 }
 
 
@@ -90,13 +91,26 @@ red #E10032 */
   .desc-header {
       padding: 1rem;
       /* border: 0.2rem solid black; */
-      float: left;
-      width: 33%;
+      float: none;
   }
 
   .desc-text {
       /* border: 0.2rem solid black; */
-      float: left;
-      width: 66%;
+      float: none;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .desc-header {
+        /* border: 0.2rem solid black; */
+        float: left;
+        width: 33%;
+    }   
+
+    .desc-text {
+        /* border: 0.2rem solid black; */
+        float: left;
+        width: 66%;
+    }
+  
   }
 
