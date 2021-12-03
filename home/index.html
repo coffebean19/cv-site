@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/app.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="nav">
+    <div id="nav" class="nav">
         <a href="#" class="btn active hover">Who I am</a>
         <a href="../hobbies/" class="btn hover">Hobbies</a>
         <a href="../contact/" class="btn hover">Contact</a>
         <a href="../cv/" class="btn hover">CV</a>
         <a href="../experimental/" class="btn hover">Experimentals</a>
+        <a href="javascript:void(0);" class="btn hover icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+          </a>
     </div>
     <h1>This is the home page with cv things!!!</h1>
     <h2>Ek is Istvan en die is my cv site. Gebou vir CMPG323, gehou vir testing en cool stuff</h2>
@@ -26,5 +30,6 @@
             Some text for testing purposes and other things until it goes unto a new line. This is even made longer bim badim bash no fokt die kak
         </div>
     </div>
+    <script src="../scripts/app.js"></script>
 </body>
 </html>
