@@ -135,7 +135,10 @@ h1, h2, h3, h4 {
 }
 
 
-.nav.responsive {position: relative;}
+.nav.responsive {
+    position: relative;
+    transition: 300ms;
+}
 
 .nav.responsive a.icon {
   position: absolute;
