@@ -34,11 +34,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/app.css">
     <link rel="stylesheet" href="./styles/intro.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Document</title>
 </head>
 <body>
         <div class="col-6 halve">
-            <div class="left-container">
+            <div class="left-container animate__animated animate__bounceInUp">
                 <h1>Welcome!!</h2>
                 <div class="card shadow hover">
                     <p>Hello! My name is Istvan Mayer, and welcome to my curriculum vitae website. In short I am a software developer, with a love for a lot of caffeine.</p>
@@ -50,7 +54,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 start-image">
+        <div class="col-6">
+            <img class="start-image" src="./images/20210823_125514.jpg" alt="">
         </div>
+        <script src="./scripts/app.js"></script>
 </body>
 </html>

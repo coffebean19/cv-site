@@ -22,23 +22,15 @@ h1 {
 .halve {
     height: 100%;
     background-color: #151B25;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .left-container {
-    transform: translateY(-5rem);
     padding: 2rem;
     margin-top: 2rem;
     border-radius: 0.5rem;
     transition: 200ms;
-}
-
-.start-image {
-    background-image: url(../images/20210823_125514.jpg);
-    background-size: cover;
-    height: 100%;
 }
 
 .btn {
@@ -47,14 +39,24 @@ h1 {
     width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     .btn {
         float: none;
         margin-top: 0%;
         width: initial;
     };
 
-    .start-image {
-        background-repeat: no-repeat;
+    .halve {
+        height: 100%;
+
+        background-color: #151B25;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-container {
+        transform: translateX(-20rem);
     }
 }

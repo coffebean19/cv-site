@@ -40,11 +40,10 @@ red #E10032 */
     position: absolute;
     left: 1.5rem;
     width: 0;
-    z-index: 1;
     border: medium solid #DBE8E1;
     border-width: 10px 10px 10px 0;
     border-color: transparent #DBE8E1 transparent transparent;
-    transition: 200ms;
+    transition: 230ms;
 }
 
 
