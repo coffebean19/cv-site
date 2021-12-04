@@ -40,11 +40,21 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
+    .container {
+        margin-top: 10rem;
+        max-width: 50rem;
+        display: block;
+    }
+
     .btn {
         float: none;
         margin-top: 0%;
         width: initial;
     };
+
+    .card {
+        margin: 10rem;
+    }
 
     .halve {
         height: 100%;
