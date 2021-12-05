@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
 .container {
 	width: 100vw;
 	/* height: 100vh; */
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	max-width: 80rem;
@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 .hover:hover {    
-    box-shadow: 0.3rem 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
     transform: scale(10rem);
 }
 
@@ -109,6 +109,8 @@ h1, h2, h3, h4 {
 
     
 .nav {
+    position: fixed;
+    top: 0;
     background-color: #034687;
     overflow: hidden;
     padding: 0;
