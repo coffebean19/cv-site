@@ -37,7 +37,7 @@ red #E10032 */
 .time-box::after{  content: " ";
     height: 0;
     position: absolute;
-    left: 1.5rem;
+    left: 3.5rem;
     width: 0;
     border: medium solid #DBE8E1;
     border-width: 10px 10px 10px 0;
@@ -50,7 +50,7 @@ red #E10032 */
   content: " ";
     height: 0;
     position: absolute;
-    left: 1.5rem;
+    left: 3.5rem;
     width: 0;
     z-index: 1;
     border: medium solid #edfdf5;
@@ -60,7 +60,7 @@ red #E10032 */
 
 /* the circles */
 .time-box::before {
-    left: -1rem;
+    left: 1rem;
     content: '';
     position: absolute;
     width: 25px;
