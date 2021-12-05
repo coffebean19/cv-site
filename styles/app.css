@@ -44,9 +44,9 @@ button i {
     float: right;
     display: block;
     position: absolute;
-    margin: -1.75rem;
+    margin: -1.5rem;
     height: 100%;
-    font-size: 2.25em;
+    font-size: 2em;
     color: #151B25;
 }
 
