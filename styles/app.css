@@ -37,7 +37,7 @@ h1, h2, h3, h4 {
 	align-items: center;
 	max-width: 80rem;
 	margin: 0 auto;
-	padding: 2rem;
+	/* padding: 2rem; */
 }
 
 .container > * {
@@ -50,15 +50,6 @@ h1, h2, h3, h4 {
     color: #151B25;
     transition: 200ms;
     min-width: 15rem;
-}
-
-.fix-width {
-    max-width: 25rem;
-}
-
-.hover:hover {    
-    box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
-    transform: scale(10rem);
 }
 
 .card-header {
@@ -83,6 +74,17 @@ h1, h2, h3, h4 {
     color: #151B25;
 }
 
+.fix-width {
+    max-width: 25rem;
+}
+
+.hover:hover {    
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.5);
+    transform: scale(10rem);
+}
+
+
+
 .cover-card {
     transform: translateX(-5rem);
 }
@@ -97,7 +99,7 @@ h1, h2, h3, h4 {
 }
 
 .shadow {
-    box-shadow: 0.1rem 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -180,29 +182,46 @@ h1, h2, h3, h4 {
   
   /* The progress bar (scroll indicator) */
   .progress-bar {
+    border-radius: 5px;
     height: 8px;
     background: #E10032;
     width: 0%;
   }
 
+  .accordion {
+    background-color: #DBE8E1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .accordion:hover {
+    background-color: #ccc;
+  }
 
-@media only screen and (min-width: 600px) {
-    /* For tablets */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
+  .active-accordion {
+      background-color: #ccc;
+      border-radius: 5px 5px 0px 0px;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+      padding: 0 0px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
 
+  .card-panel {
+    border-radius: 0px 0px 5px 5px;
+  }
 
-}
 
 @media only screen and (min-width: 768px) {
     /* For tablets */

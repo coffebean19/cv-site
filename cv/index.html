@@ -14,18 +14,28 @@
     <title>The CV</title>
 </head>
 <body>
-
-    <div id="tech-card" class="card container shadow animate__animated animate__bounceInDown" style="margin-top: 1rem;">
-        <div class="card-header">
-            <h2 class="header">Tech stack I have worked with</h2>
+    <button id="tech-card" class="card container shadow accordion animate__animated animate__bounceInDown"><h2 class="header">Tech stack I have worked with</h2></button>
+    
+    <div class="panel container">
+        <div class="card card-panel">        
+            <div class="card-inner">
+                <ul>
+                    <li>first item</li>
+                    <li>second item</li>
+                    <li>third item</li>
+                </ul>
+            </div>
         </div>
-        <div class="card-line"></div>
     </div>
+
     <div id="project-card" class="card container shadow animate__animated animate__bounceInDown" style="margin-top: 1rem;">
         <div class="card-header">
             <h2 class="header">Projects I have worked on</h2>
         </div>
         <div class="card-line"></div>
+        <div class="card-inner">
+            So ja
+        </div>
     </div>
     <div id="timeline-card" class="card container shadow animate__animated animate__fadeInUp" style="margin-top: 2rem;">        
         <div class="timeline">
@@ -64,6 +74,9 @@
             <div class="card shadow hover time-box">some more stuff</div>
         </div>
     </div>
+    <div class="progress-container shadow">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
     <div id="nav" class="nav">
         <a href="../cv/" class="btn active hover">CV</a>
         <a href="../home/" class="btn hover">Who I am</a>
@@ -72,9 +85,6 @@
         <a href="javascript:void(0);" class="btn hover icon" onclick="openNav()">
             <i class="fa fa-bars"></i>
           </a>
-    </div>
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
     </div>
     <script src="../scripts/app.js"></script>
     <script src="../scripts/cv.js"></script>
