@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Random from './components/Random.vue'
 import SecondRandom from './components/SecondRandom.vue';
+import Counter from './components/Counter.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import SecondRandom from './components/SecondRandom.vue';
 
   <main>
     <SecondRandom msg="Jou nai" />
+    <Counter/>
   </main>
 </template>
 
