@@ -13,7 +13,7 @@ import Counter from './components/Counter.vue';
 
   <main>
     <SecondRandom msg="Jou nai" />
-    <Counter/>
+    <Counter count=0 />
   </main>
 </template>
 

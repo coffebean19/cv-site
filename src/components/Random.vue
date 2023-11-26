@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-    random: string
-}>()
+    defineProps<{
+        random: string
+    }>()
 </script>
 
 <template>

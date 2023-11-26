@@ -1,6 +1,6 @@
 <script setup lang="ts">
-    defineProps<{
-        count: number
+    defineProps <{
+        count: Number
     }>()
 </script>
 
@@ -9,3 +9,9 @@
         Count is: {{ count }}
     </button>
 </template>
+
+<style scoped>
+    button {
+        font-weight: bold;
+    }
+</style>
