@@ -5,5 +5,5 @@ defineProps<{
 </script>
 
 <template>
-    <h1 >{{ random }}</h1>
+    <h1>{{ random }}</h1>
 </template>
