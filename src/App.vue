@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import Random from './components/Random.vue'
 import SecondRandom from './components/SecondRandom.vue';
-import Counter from './components/Counter.vue';
+import Counter from './components/CounterComponent.vue';
 </script>
 
 <template>
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+  </nav>
+
+  <RouterView></RouterView>
+
   <header>
     <div class="wrapper">
       <Random random="This works" />
@@ -12,11 +18,9 @@ import Counter from './components/Counter.vue';
   </header>
 
   <main>
-    <SecondRandom msg="Jou nai" />
-    <Counter count=0 />
+    <SecondRandom msg="Wowww" />
+    <Counter />
   </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
