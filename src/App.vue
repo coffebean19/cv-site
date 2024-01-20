@@ -1,7 +1,7 @@
 <template>
-  <div v-if="landing" style="transition: opacity 0.5s;">
+  <div v-if="landing">
     <h1>This is the intro page. Or something</h1>
-    <button class="button-65" @click="landing = !landing">Enter</button>
+    <button class=" button-65" @click="landed">Enter</button>
   </div>
   <div v-if="!landing">
     <nav>
@@ -30,6 +30,10 @@ import { reactive, ref } from "vue";
 
 //Landing page
 const landing = ref(true);
+
+function landed() {
+  landing.value = false;
+}
 
 </script>
 
