@@ -1,6 +1,6 @@
 <template>
-  <div :class="landing">
-    <div class="intro">
+  <div :class="{ landing: landing }">
+    <div>
       <h1>This is the intro page. Or something</h1>
       <button class="button-6" @click="landed">Enter</button>
     </div>
