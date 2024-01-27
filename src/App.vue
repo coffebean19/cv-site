@@ -1,7 +1,9 @@
 <template>
-  <div v-if="landing" class="landing">
-    <h1>This is the intro page. Or something</h1>
-    <button class="button-6" @click="landed">Enter</button>
+  <div :class="landing">
+    <div class="intro">
+      <h1>This is the intro page. Or something</h1>
+      <button class="button-6" @click="landed">Enter</button>
+    </div>
   </div>
   <div v-if="!landing">
     <nav>
@@ -56,5 +58,12 @@ nav a {
   left: 0;
   background: rgb(255, 62, 0);
   background: linear-gradient(0deg, rgba(255, 62, 0, 1) 0%, rgba(175, 27, 103, 1) 15%, rgba(73, 24, 132, 1) 58%, rgba(2, 7, 67, 1) 100%);
+  transition: 0.5s;
+}
+
+.intro {
+  transition: 0.333s;
+  padding: 15px;
+  width: 33vw;
 }
 </style>
