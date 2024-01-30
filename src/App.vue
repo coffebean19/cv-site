@@ -1,6 +1,10 @@
 <template>
   <div :class="{ landing: landing }">
     <i class="cloud"></i>
+    <i class="cloud" style="animation-duration: 20s; animation-direction: alternate-reverse; top: 40%"></i>
+    <i class="cloud" style="animation-duration: 25s; animation-direction: alternate-reverse; top: 45%"></i>
+    <i class="cloud" style="animation-duration: 30s; animation-direction: alternate-reverse; top: 52%"></i>
+    <i class="cloud" style="animation-duration: 35s; animation-direction: alternate-reverse; top: 55%"></i>
     <div>
       <h1>This is the intro page. Or something</h1>
       <button class="button-6" @click="landed">Enter</button>
@@ -75,11 +79,11 @@ nav a {
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .5);
   display: inline-block;
   height: 1em;
-  left: 50%;
   margin-left: -1.5em;
   position: absolute;
   top: 50%;
   width: 3em;
+  animation: move 15s linear infinite;
   /* -webkit-filter: drop-shadow(0 2px 3px hsla(0, 0%, 0%, .25)); */
 }
 
@@ -105,5 +109,47 @@ nav a {
   left: .4em;
   top: -.75em;
   width: 1.6em;
+}
+
+@keyframes move {
+  0% {
+    left: -2%;
+  }
+
+  10% {
+    left: 10%
+  }
+
+  25% {
+    left: 25%;
+  }
+
+  35% {
+    left: 35%;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  66% {
+    left: 66%;
+  }
+
+  75% {
+    left: 75%;
+  }
+
+  85% {
+    left: 85%;
+  }
+
+  95% {
+    left: 95%;
+  }
+
+  100% {
+    left: 105%;
+  }
 }
 </style>
