@@ -1,5 +1,6 @@
 <template>
   <div :class="{ landing: landing }">
+    <i class="cloud"></i>
     <div>
       <h1>This is the intro page. Or something</h1>
       <button class="button-6" @click="landed">Enter</button>
@@ -65,5 +66,44 @@ nav a {
   transition: 0.333s;
   padding: 15px;
   width: 33vw;
+}
+
+.cloud {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .1));
+  border-radius: 1em;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .5);
+  display: inline-block;
+  height: 1em;
+  left: 50%;
+  margin-left: -1.5em;
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  /* -webkit-filter: drop-shadow(0 2px 3px hsla(0, 0%, 0%, .25)); */
+}
+
+.cloud:after,
+.cloud:before {
+  background-color: #fff;
+  content: '';
+  border-radius: 100%;
+  position: absolute;
+}
+
+.cloud::after {
+  height: 1em;
+  width: 1em;
+  top: -0.5em;
+  right: .4em;
+  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, .025));
+}
+
+.cloud:before {
+  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, .075));
+  height: 1.6em;
+  left: .4em;
+  top: -.75em;
+  width: 1.6em;
 }
 </style>
