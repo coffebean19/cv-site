@@ -1,16 +1,23 @@
 <template>
-  <div :class="{ landing: landing }">
+  <div class="test">
+    <button @click="changeColor">{{ screenWidth }}</button>
+  </div>
+  <div v-if="intro" :class="{ landing: intro }">
     <i class="cloud"></i>
-    <i class="cloud" style="animation-duration: 20s; animation-direction: alternate-reverse; top: 40%"></i>
-    <i class="cloud" style="animation-duration: 25s; animation-direction: alternate-reverse; top: 45%"></i>
-    <i class="cloud" style="animation-duration: 30s; animation-direction: alternate-reverse; top: 52%"></i>
-    <i class="cloud" style="animation-duration: 35s; animation-direction: alternate-reverse; top: 55%"></i>
+    <i class="cloud"
+      :style="{ animationDuration: `$(v-bind(timeToCross(12.5)))`, animationDirection: 'alternate-reverse', top: '40%', backgroundColor: 'red' }"></i>
+    <i class="cloud" style="animation-duration: v-bind(timeToCross(13)); animation-direction: alternate; top: 45%"></i>
+    <i class="cloud"
+      style="animation-duration: v-bind(timeToCross(15)); animation-direction: alternate-reverse; top: 52%"></i>
+    <i class="cloud" style="animation-duration: v-bind(timeToCross(20)); animation-direction: alternate; top: 55%"></i>
+    <i class="cloud"
+      style="animation-duration: v-bind(timeToCross(30)); animation-direction: alternate-reverse; top: 52%"></i>
     <div>
       <h1>This is the intro page. Or something</h1>
       <button class="button-6" @click="landed">Enter</button>
     </div>
   </div>
-  <div v-if="!landing">
+  <div v-if="!intro">
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/counter">Counter</RouterLink>
@@ -33,14 +40,28 @@
 <script setup lang="ts">
 import Random from './views/Random.vue'
 import SecondRandom from './views/SecondRandom.vue';
-import { reactive, ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 //Landing page
-const landing = ref(true);
+const intro = ref(true);
 
 function landed() {
-  landing.value = false;
+  intro.value = false;
 }
+
+
+//test
+const color = ref("blue");
+
+function changeColor() {
+  if (color.value === "blue") {
+    color.value = "red";
+  } else {
+    color.value = "blue";
+  }
+}
+
+const screenWidth = ref(screen.width);
 
 </script>
 
@@ -72,43 +93,13 @@ nav a {
   width: 33vw;
 }
 
-.cloud {
-  background-color: #fff;
-  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .1));
-  border-radius: 1em;
-  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .5);
-  display: inline-block;
-  height: 1em;
-  margin-left: -1.5em;
+
+.test {
+  width: 20px;
+  height: 20px;
+  background-color: v-bind(color);
   position: absolute;
-  top: 50%;
-  width: 3em;
-  animation: move 15s linear infinite;
-  /* -webkit-filter: drop-shadow(0 2px 3px hsla(0, 0%, 0%, .25)); */
-}
-
-.cloud:after,
-.cloud:before {
-  background-color: #fff;
-  content: '';
-  border-radius: 100%;
-  position: absolute;
-}
-
-.cloud::after {
-  height: 1em;
-  width: 1em;
-  top: -0.5em;
-  right: .4em;
-  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, .025));
-}
-
-.cloud:before {
-  background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, .075));
-  height: 1.6em;
-  left: .4em;
-  top: -.75em;
-  width: 1.6em;
+  z-index: 200;
 }
 
 @keyframes move {
