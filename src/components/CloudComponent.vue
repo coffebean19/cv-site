@@ -3,7 +3,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref } from 'vue';
+
+const props = defineProps<{
+  pxPs: number,
+  top: number,
+  direction: string
+}>();
 
 const screenWidth = ref(screen.width)
 
@@ -11,17 +17,25 @@ function timeToCross(pxPs: number): string {
   return (screenWidth.value / pxPs).toString() + 's';
 }
 
-function windowResize() {
-  screenWidth.value = screen.width;
+function fromTop(top: number): string {
+  return top + '%';
 }
 
-onMounted(() => {
-  window.addEventListener('resize', windowResize);
-});
+function cloudDirection(direction: string) {
+  return direction;
+}
 
-onUnmounted(() => {
-  window.removeEventListener('resize', windowResize);
-})
+// function windowResize() {
+// screenWidth.value = screen.width;
+// }
+
+// onMounted(() => {
+// window.addEventListener('resize', windowResize);
+// });
+
+// onUnmounted(() => {
+// window.removeEventListener('resize', windowResize);
+// })
 
 </script>
 
@@ -35,9 +49,11 @@ onUnmounted(() => {
   height: 1em;
   margin-left: -1.5em;
   position: absolute;
-  top: 50%;
   width: 3em;
-  animation: move 15s linear infinite;
+  animation: move v-bind(timeToCross(pxPs)) linear v-bind(cloudDirection(direction)) infinite;
+  /* animation-delay: 2s; */
+  z-index: 200;
+  top: v-bind(fromTop(top));
   /* -webkit-filter: drop-shadow(0 2px 3px hsla(0, 0%, 0%, .25)); */
 }
 
@@ -63,5 +79,36 @@ onUnmounted(() => {
   left: .4em;
   top: -.75em;
   width: 1.6em;
+}
+
+
+@keyframes move {
+  0% {
+    left: 0%;
+    opacity: 0%;
+  }
+
+  5% {
+    opacity: 0%;
+  }
+
+  10% {
+    /* left: 10%; */
+    opacity: 95%;
+  }
+
+  90% {
+    opacity: 95%;
+  }
+
+  95% {
+    /* left: 95%; */
+    opacity: 0%;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0%;
+  }
 }
 </style>

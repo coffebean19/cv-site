@@ -1,19 +1,16 @@
 <template>
+  <CloudComponent :px-ps="10" :top="40" direction="alternate-reverse"></CloudComponent>
+  <CloudComponent :px-ps="15" :top="45" direction="alternate"></CloudComponent>
+  <CloudComponent :px-ps="12" :top="50" direction="alternate"></CloudComponent>
+  <CloudComponent :px-ps="17" :top="55" direction="alternate-reverse"></CloudComponent>
+  <CloudComponent :px-ps="14" :top="60" direction="alternate-reverse"></CloudComponent>
+  <CloudComponent :px-ps="19" :top="65" direction="alternate"></CloudComponent>
   <div class="test">
     <button @click="changeColor">{{ screenWidth }}</button>
   </div>
   <div v-if="intro" :class="{ landing: intro }">
-    <i class="cloud"></i>
-    <i class="cloud"
-      :style="{ animationDuration: `$(v-bind(timeToCross(12.5)))`, animationDirection: 'alternate-reverse', top: '40%', backgroundColor: 'red' }"></i>
-    <i class="cloud" style="animation-duration: v-bind(timeToCross(13)); animation-direction: alternate; top: 45%"></i>
-    <i class="cloud"
-      style="animation-duration: v-bind(timeToCross(15)); animation-direction: alternate-reverse; top: 52%"></i>
-    <i class="cloud" style="animation-duration: v-bind(timeToCross(20)); animation-direction: alternate; top: 55%"></i>
-    <i class="cloud"
-      style="animation-duration: v-bind(timeToCross(30)); animation-direction: alternate-reverse; top: 52%"></i>
     <div>
-      <h1>This is the intro page. Or something</h1>
+      <h1>This is the intro page. Or something {{ timeToCross(12) }}</h1>
       <button class="button-6" @click="landed">Enter</button>
     </div>
   </div>
@@ -41,6 +38,7 @@
 import Random from './views/Random.vue'
 import SecondRandom from './views/SecondRandom.vue';
 import { ref, onMounted, onUnmounted } from "vue";
+import CloudComponent from "@/components/CloudComponent.vue"
 
 //Landing page
 const intro = ref(true);
@@ -61,7 +59,23 @@ function changeColor() {
   }
 }
 
-const screenWidth = ref(screen.width);
+const screenWidth = ref(screen.width)
+
+function timeToCross(pxPs: number): string {
+  return (screenWidth.value / pxPs).toString() + 's';
+}
+
+function windowResize() {
+  screenWidth.value = screen.width;
+}
+
+onMounted(() => {
+  window.addEventListener('resize', windowResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', windowResize);
+})
 
 </script>
 
@@ -100,47 +114,5 @@ nav a {
   background-color: v-bind(color);
   position: absolute;
   z-index: 200;
-}
-
-@keyframes move {
-  0% {
-    left: -2%;
-  }
-
-  10% {
-    left: 10%
-  }
-
-  25% {
-    left: 25%;
-  }
-
-  35% {
-    left: 35%;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  66% {
-    left: 66%;
-  }
-
-  75% {
-    left: 75%;
-  }
-
-  85% {
-    left: 85%;
-  }
-
-  95% {
-    left: 95%;
-  }
-
-  100% {
-    left: 105%;
-  }
 }
 </style>
