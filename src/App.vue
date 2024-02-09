@@ -1,19 +1,5 @@
 <template>
-  <CloudComponent :px-ps="10" :top="40" direction="alternate-reverse"></CloudComponent>
-  <CloudComponent :px-ps="15" :top="45" direction="alternate"></CloudComponent>
-  <CloudComponent :px-ps="12" :top="50" direction="alternate"></CloudComponent>
-  <CloudComponent :px-ps="17" :top="55" direction="alternate-reverse"></CloudComponent>
-  <CloudComponent :px-ps="14" :top="60" direction="alternate-reverse"></CloudComponent>
-  <CloudComponent :px-ps="19" :top="65" direction="alternate"></CloudComponent>
-  <div class="test">
-    <button @click="changeColor">{{ screenWidth }}</button>
-  </div>
-  <div v-if="intro" :class="{ landing: intro }">
-    <div>
-      <h1>This is the intro page. Or something {{ timeToCross(12) }}</h1>
-      <button class="button-6" @click="landed">Enter</button>
-    </div>
-  </div>
+  <LandingModal v-if="intro" />
   <div v-if="!intro">
     <nav>
       <RouterLink to="/">Home</RouterLink>
@@ -38,7 +24,7 @@
 import Random from './views/Random.vue'
 import SecondRandom from './views/SecondRandom.vue';
 import { ref, onMounted, onUnmounted } from "vue";
-import CloudComponent from "@/components/CloudComponent.vue"
+import LandingModal from "@/modals/LandingModal.vue"
 
 //Landing page
 const intro = ref(true);

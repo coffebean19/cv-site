@@ -1,13 +1,14 @@
 <template>
-  <i class="cloud"></i>
+  <i class="cloud bg-sky-50 before:bg-sky-50 after:bg-sky-50"></i>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const top = Math.floor(Math.random() * (75 - 10 + 1)) + 10;
+const speed = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+
 const props = defineProps<{
-  pxPs: number,
-  top: number,
   direction: string
 }>();
 
@@ -25,23 +26,10 @@ function cloudDirection(direction: string) {
   return direction;
 }
 
-// function windowResize() {
-// screenWidth.value = screen.width;
-// }
-
-// onMounted(() => {
-// window.addEventListener('resize', windowResize);
-// });
-
-// onUnmounted(() => {
-// window.removeEventListener('resize', windowResize);
-// })
-
 </script>
 
 <style scoped>
 .cloud {
-  background-color: #fff;
   background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .1));
   border-radius: 1em;
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .5);
@@ -50,7 +38,7 @@ function cloudDirection(direction: string) {
   margin-left: -1.5em;
   position: absolute;
   width: 3em;
-  animation: move v-bind(timeToCross(pxPs)) linear v-bind(cloudDirection(direction)) infinite;
+  animation: move v-bind(timeToCross(speed)) linear v-bind(cloudDirection(direction)) infinite;
   /* animation-delay: 2s; */
   z-index: 200;
   top: v-bind(fromTop(top));
@@ -59,7 +47,6 @@ function cloudDirection(direction: string) {
 
 .cloud:after,
 .cloud:before {
-  background-color: #fff;
   content: '';
   border-radius: 100%;
   position: absolute;
