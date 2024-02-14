@@ -12,8 +12,12 @@
         enter-to-class="transform translate-x-0" leave-active-class="transition duration-200 ease-in-out"
         leave-from-class="transform -translate-x-0" leave-to-class="transform -translate-x-full">
         <DisclosurePanel class="overflow-visible bg-stone-800 absolute w-3/4 h-screen left-0 shadow-xl shadow-black">
-          <RouterLink to="/">Go to Home</RouterLink>
-          <RouterLink to="/ceevee">Go to CV</RouterLink>
+          <ul>
+            <li :key="link.name" v-for="link in links" class="p-4">
+              <RouterLink :to="link.path">{{ link.name }}</RouterLink>
+            </li>
+          </ul>
+
 
         </DisclosurePanel>
       </Transition>
@@ -25,5 +29,7 @@
 // imports
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { Bars2Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+
+const links = [{ name: 'Home', path: '/' }, { name: 'CV', path: '/ceevee' }, { name: 'Test', path: '/test' }]
 
 </script>
