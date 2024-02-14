@@ -3,8 +3,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue, js, jsx, ts, tsx}"],
-  content: [],
+  content: ["./index.html", "./src/**/*.{vue, js, jsx, ts, tsx}"],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -16,7 +15,7 @@ module.exports = {
       orange: colors.orange,
       sky: colors.sky,
       violet: colors.violet,
-      purple: colors.purple
+      purple: colors.purple,
     },
     extend: {},
   },
