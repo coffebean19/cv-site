@@ -1,5 +1,5 @@
 <template>
-  <i class="cloud bg-sky-50 before:bg-sky-50 after:bg-sky-50"></i>
+  <i class="cloud bg-sky-50 before:bg-sky-50 after:bg-sky-50 "></i>
 </template>
 
 <script setup lang="ts">
@@ -40,7 +40,6 @@ function cloudDirection(direction: string) {
   width: 3em;
   animation: move v-bind(timeToCross(speed)) linear v-bind(cloudDirection(direction)) infinite;
   /* animation-delay: 2s; */
-  z-index: 200;
   top: v-bind(fromTop(top));
   /* -webkit-filter: drop-shadow(0 2px 3px hsla(0, 0%, 0%, .25)); */
 }
