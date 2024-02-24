@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 // imports
-import NavBar from "./components/NavBar.vue";
+import NavBar from "./components/layout/NavBar.vue";
 </script>
 
 <style scoped></style>

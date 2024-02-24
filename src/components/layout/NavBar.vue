@@ -32,6 +32,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { Bars2Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
-const links = [{ name: 'Home', path: '/' }, { name: 'CV', path: '/ceevee' }, { name: 'Test', path: '/test' }]
+const links = [{ name: 'Home', path: '/' }, { name: 'CV', path: '/ceevee' }, { name: 'Test', path: '/test' }, { name: "Latin", path: "/latin" }]
 
 </script>
