@@ -11,10 +11,12 @@
       <Transition enter-active-class="transition duration-300 ease-in-out" enter-from-class="transform -translate-x-full"
         enter-to-class="transform translate-x-0" leave-active-class="transition duration-200 ease-in-out"
         leave-from-class="transform -translate-x-0" leave-to-class="transform -translate-x-full">
-        <DisclosurePanel class="overflow-visible bg-stone-800 absolute w-3/4 h-screen left-0 shadow-xl shadow-black z-50">
-          <ul>
-            <li :key="link.name" v-for="link in links" class="p-4">
-              <RouterLink :to="link.path">{{ link.name }}</RouterLink>
+        <DisclosurePanel class="overflow-visible bg-stone-800 absolute w-3/4 h-screen left-0 shadow-xl shadow-black z-50"
+          v-slot="{ close }">
+          <ul class="">
+            <li :key="link.name" v-for="link in links" class="p-4 block">
+              <RouterLink :to="link.path" @click="close()" class="p-4">{{ link.name }}
+              </RouterLink>
             </li>
           </ul>
 
