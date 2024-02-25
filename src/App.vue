@@ -1,7 +1,5 @@
 <template>
-  <!-- <LandingModal v-if="intro" /> -->
   <NavBar class="sticky top-0 w-screen z-50" />
-
   <RouterView></RouterView>
 </template>
 

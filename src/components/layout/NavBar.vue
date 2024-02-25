@@ -14,13 +14,12 @@
         <DisclosurePanel class="overflow-visible bg-stone-800 absolute w-3/4 h-screen left-0 shadow-xl shadow-black z-50"
           v-slot="{ close }">
           <ul class="">
-            <li :key="link.name" v-for="link in links" class="p-4 block">
-              <RouterLink :to="link.path" @click="close()" class="p-4">{{ link.name }}
+            <li :key="link.name" v-for="link in links" class="block">
+              <RouterLink :to="link.path" @click="close()"
+                class="p-4 w-full block active:bg-stone-600 hover:bg-slate-600">{{ link.name }}
               </RouterLink>
             </li>
           </ul>
-
-
         </DisclosurePanel>
       </Transition>
     </Disclosure>
