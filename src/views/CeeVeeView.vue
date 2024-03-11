@@ -17,10 +17,21 @@
     <section class="bg-slate-50 shadow p-6 mt-6 leading-7 tracking-wide">
       <h2 class="text-stone-600 text-xl my-4 ">Experience</h2>
       <section>
-        <h3 class="text-stone-800 text-lg underline underline">Barista work</h3>
-        <div class="border-l border-l-slate-500">
+        <h3 class="text-stone-800 text-lg underline">Barista work</h3>
+        <div class="border-l border-l-slate-500 ml-6">
           <h4 class="before:content-['-']">Kukua</h4>
           <h4 class="before:content-['-']">Magen</h4>
+        </div>
+        <p>(Irrelevant but this is testing)</p>
+      </section>
+      <section>
+        <h3 class="text-stone-800 text-lg underline">University work</h3>
+        <div class="border-l border-l-slate-500 ml-6">
+          <h4 class="before:content-['-']">Demi work for Python</h4>
+          <h4 class="before:content-['-']">Demi work for C++</h4>
+          <h4 class="before:content-['-']">Demi work for 3rd year AI</h4>
+          <h4 class="before:content-['-']">SI Facilitator for C++</h4>
+          <h4 class="before:content-['-']">Tutor for Decision Support Systems</h4>
         </div>
       </section>
     </section>
